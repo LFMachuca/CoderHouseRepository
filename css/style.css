@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ESTILOS GENERALES */
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*HEADER*/
+.navbar{
+    background-color: rgba(243, 163, 15, 0.938);
+    padding: 1rem;
+}
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-brand{
+    display: none;
+}
+/* SECCION HERO */
+.hero{
+    height: 100vh;
+    background-image: url(/img/ryskcombat-imagen-inicio.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-self: center;
+    
+}
+.hero-text {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 30px 0;
+}
+.hero-text p{
+    margin: 15px 10px;
+
+}
+.hero-text button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 90%;
+    margin: 5px;
+    border: none;
+    background: rgb(243, 163, 15);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+/* ANIMACION BOTONES */
+.hero-text button::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #0f0f0f;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    transition: .3s ease-in-out ;
+}
+.hero-text button:hover::after{
+    top: 0;
+
+}
+.hero-text button span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+/* FOOTER */
+footer{
+    min-height: 500px;
+    background: #0f0f0f;
+}
+.footer-logo{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+.footer-texto{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.redes-sociales a{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+
+}
+/*RESPONSIVE*/
+@media screen and (min-width: 767px){
+    .navbar-brand{
+        display: block;
+    }
+}
