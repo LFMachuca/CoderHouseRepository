@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 /* ESTILOS GENERALES */
+body{
+    background-color: #616161;
+}
 section{
     display: flex;
     flex-direction: column;
@@ -12,7 +15,7 @@ section{
 }
 /*HEADER*/
 .navbar{
-    background-color: rgba(243, 163, 15, 0.938);
+    background-color: rgb(243, 163, 15);
     padding: 1rem;
 }
 .navbar-collapse{
@@ -25,7 +28,7 @@ section{
 /* SECCION HERO */
 .hero{
     height: 100vh;
-    background-image: url(/img/ryskcombat-imagen-inicio.jpg);
+    background-image: url(../img/ryskcombat-imagen-inicio.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,7 +85,7 @@ section{
 }
 /* FOOTER */
 footer{
-    min-height: 500px;
+    min-height: 100px;
     background: #0f0f0f;
 }
 .footer-logo{
@@ -94,22 +97,56 @@ footer{
     font-size: 1.5rem;
     padding: 20px;
     margin-bottom: 30px;
+    color: white;
 }
 .redes-sociales a{
-    width: 100px;
+    width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2px;
     margin: 10px;
-    border: 2px solid white;
-    border-radius: 5px;
-
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: all .3s ease-in ;
 }
-/*RESPONSIVE*/
+.redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all .2s ease-in;
+}
+.redes-sociales a:hover{
+    background-color: rgb(243, 163, 15);
+    border: 1px solid rgb(78, 78, 78) ;
+}
+.redes-sociales a:hover i{
+    color: black;
+}
+/*RESPONSIVE INDEX*/
 @media screen and (min-width: 767px){
     .navbar-brand{
         display: block;
     }
+    .hero-text button{
+        width: 30%;
+    }
+}
+/* CSS RANKING */
+.titulo{
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    
+}
+.ranking-section{
+    background: rgba(243, 163, 15, 0.733);
+}
+/* RESPONSIVE RANKING */
+@media screen and (min-width: 767px){
+    .card{
+        max-width: 100% !important;
+    }
+
 }
