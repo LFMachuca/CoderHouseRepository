@@ -150,3 +150,187 @@ footer{
     }
 
 }
+
+/* SECCION PELEADORES */
+    /* BARRA DE BUSQUEDA  */
+.barra-busqueda{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    position: relative;
+    top: 4.5rem;
+    padding: 10px;
+    width: 100%;
+}
+/* BOTON DROP */
+.dropbtn{
+    background-color:rgb(243, 163, 15) ;
+    color:white;
+    padding: 10px 23px;
+    font-size: 16px;
+    border: none;
+    margin-right: 25px;
+}
+/* CONTENEDOR DE LA LISTA, ES PARA POSICIONAR EL CONTENIDO */
+.lista-pesos{
+    position: relative;
+    display: inline-block;
+}
+/* CONTENIDO DEL DROP QUE ESTA OCULTO */
+.contenido-lista-pesos{
+    position: absolute;
+    background-color: #9e2e2e;
+    right: 25px;
+    display: none;
+}
+/* LINKS DEL DROP  */
+.contenido-lista-pesos a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block ;
+    z-index: 1;
+}
+/*esta clase es para el evento clic del boton pesos*/
+.ver{
+    display: block;
+}
+
+/* TARJETAS PELEADORES */
+.container{
+    margin-top: 5rem;
+}
+.tarjeta{
+    margin: 10px 0;
+    background:white;
+    width: 100%;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.tarjeta img{
+    margin-right: 16px;
+}
+.tarjeta-top{
+    display: flex;
+    align-items: center;
+
+}
+.tarjeta-contenido{
+    flex-grow: 1;
+    text-align: start;
+    margin:10px;
+    padding: 15px;
+}
+/* BOTONES REDES SOCIALES */
+.tarjeta-redes-sociales{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* SECCION CONTACTO */
+.contacto{
+    background-color: #0f0f0f;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6em 1.5em;
+}
+.contacto-contenido{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+.contacto-contenido h1{
+    text-align: center;
+    font-size: 3em;
+    color:rgb(243, 163, 15);
+}
+.contacto-wrapper{
+    margin-top: 50px;
+    box-shadow: 0 0 20px 0 rgba(243, 163, 15, .3);
+
+}
+.contacto-wrapper > *{
+    padding: 1em;
+}
+.formulario-contacto{
+    background:#2222;
+
+}
+/* ESTILOS DE FORMULARIO */
+.formulario-contacto form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.formulario-contacto form .block{
+    grid-column: 1 / 3;
+}
+.formulario-contacto form div label {
+    margin: 0;
+    padding: 1em;
+}
+.formulario-contacto form button,
+.formulario-contacto form input,
+.formulario-contacto form textarea{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgb(243, 163, 15);
+    outline: none;
+    color: white;
+}
+/* ESTILOS BOTON */
+.formulario-contacto form button{
+    background: rgb(243, 163, 15) ;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    color: #0f0f0f;
+}
+.formulario-contacto form button:hover,
+.formulario-contacto form button:focus{
+    background: #222222;
+    color: white;
+    transition: background-color .3s ease-in-out;
+}
+/* FORMULARIO INFO */
+.contacto-info{
+    background:rgb(243, 163, 15);
+    color: #0f0f0f;
+}
+.contacto-info h4,
+.contacto-info ul,
+.contacto-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.contacto-info ul{
+    list-style: none;
+    padding: 0;
+}
+
+.contacto-info ul li {
+    padding:.3rem;
+}
+
+/* RESPONSIVE SECCION  CONTACTO*/
+@media (min-width:700px){
+    .contacto-wrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contacto-wrapper > *{
+        padding: 2em;
+    }
+
+    .contacto-info h4,
+    .contacto-info ul,
+    .contacto-info p{
+        padding: 1em;
+        text-align: left;
+    }
+}
