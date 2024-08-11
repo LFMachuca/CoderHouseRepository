@@ -1,336 +1,314 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* ESTILOS GENERALES */
-body{
-    background-color: #616161;
-}
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-/*HEADER*/
-.navbar{
-    background-color: rgb(243, 163, 15);
-    padding: 1rem;
-}
-.navbar-collapse{
-    align-items: center;
-    justify-content: space-between;
-}
-.navbar-brand{
-    display: none;
-}
-/* SECCION HERO */
-.hero{
-    height: 100vh;
-    background-image: url(../img/ryskcombat-imagen-inicio.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    align-self: center;
-    
-}
-.hero-text {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 30px 0;
-}
-.hero-text p{
-    margin: 15px 10px;
-
-}
-.hero-text button{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    width: 90%;
-    margin: 5px;
-    border: none;
-    background: rgb(243, 163, 15);
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: .3s ease all;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    color: white;
-}
-/* ANIMACION BOTONES */
-.hero-text button::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #0f0f0f;
-    position: absolute;
-    top: -80px;
-    left: 0;
-    transition: .3s ease-in-out ;
-}
-.hero-text button:hover::after{
-    top: 0;
-
-}
-.hero-text button span{
-    position: relative;
-    z-index: 2;
-    transition: .3s ease all;
-}
-/* FOOTER */
-footer{
-    min-height: 100px;
-    background: #0f0f0f;
-}
-.footer-logo{
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-}
-.footer-texto{
-    font-size: 1.5rem;
-    padding: 20px;
-    margin-bottom: 30px;
-    color: white;
-}
-.redes-sociales a{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    margin: 10px;
-    border: 1px solid white;
-    border-radius: 50%;
-    transition: all .3s ease-in ;
-}
-.redes-sociales i{
-    color: white;
-    font-size: 1.5rem;
-    transition: all .2s ease-in;
-}
-.redes-sociales a:hover{
-    background-color: rgb(243, 163, 15);
-    border: 1px solid rgb(78, 78, 78) ;
-}
-.redes-sociales a:hover i{
-    color: black;
-}
-/*RESPONSIVE INDEX*/
-@media screen and (min-width: 767px){
-    .navbar-brand{
-        display: block;
-    }
-    .hero-text button{
-        width: 30%;
-    }
-}
-/* CSS RANKING */
-.titulo{
-    margin-top: 100px;
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    
-}
-.ranking-section{
-    background: rgba(243, 163, 15, 0.733);
-}
-/* RESPONSIVE RANKING */
-@media screen and (min-width: 767px){
-    .card{
-        max-width: 100% !important;
-    }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* SECCION PELEADORES */
-    /* BARRA DE BUSQUEDA  */
-.barra-busqueda{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: white;
-    position: relative;
-    top: 4.5rem;
-    padding: 10px;
-    width: 100%;
-}
-/* BOTON DROP */
-.dropbtn{
-    background-color:rgb(243, 163, 15) ;
-    color:white;
-    padding: 10px 23px;
-    font-size: 16px;
-    border: none;
-    margin-right: 25px;
-}
-/* CONTENEDOR DE LA LISTA, ES PARA POSICIONAR EL CONTENIDO */
-.lista-pesos{
-    position: relative;
-    display: inline-block;
-}
-/* CONTENIDO DEL DROP QUE ESTA OCULTO */
-.contenido-lista-pesos{
-    position: absolute;
-    background-color: #9e2e2e;
-    right: 25px;
-    display: none;
-}
-/* LINKS DEL DROP  */
-.contenido-lista-pesos a{
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block ;
-    z-index: 1;
-}
-/*esta clase es para el evento clic del boton pesos*/
-.ver{
-    display: block;
+body {
+  background-color: #616161;
 }
 
-/* TARJETAS PELEADORES */
-.container{
-    margin-top: 5rem;
-}
-.tarjeta{
-    margin: 10px 0;
-    background:white;
-    width: 100%;
-    padding: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.tarjeta img{
-    margin-right: 16px;
-}
-.tarjeta-top{
-    display: flex;
-    align-items: center;
-
-}
-.tarjeta-contenido{
-    flex-grow: 1;
-    text-align: start;
-    margin:10px;
-    padding: 15px;
-}
-/* BOTONES REDES SOCIALES */
-.tarjeta-redes-sociales{
-    display: flex;
-    justify-content: space-around;
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* SECCION CONTACTO */
-.contacto{
-    background-color: #0f0f0f;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 6em 1.5em;
+header .navbar {
+  background-color: rgb(243, 163, 15);
+  padding: 1rem;
 }
-.contacto-contenido{
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5em;
+header .navbar .navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
 }
-.contacto-contenido h1{
-    text-align: center;
-    font-size: 3em;
-    color:rgb(243, 163, 15);
+header .navbar .navbar-collapse .navbar-brand {
+  display: none;
 }
-.contacto-wrapper{
-    margin-top: 50px;
-    box-shadow: 0 0 20px 0 rgba(243, 163, 15, .3);
 
+.contacto {
+  background: #0f0f0f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6em 1.5em;
 }
-.contacto-wrapper > *{
-    padding: 1em;
+.contacto .contacto-contenido {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1.5em;
 }
-.formulario-contacto{
-    background:#2222;
+.contacto .contacto-contenido h1 {
+  text-align: center;
+  font-size: 3em;
+  color: rgb(243, 163, 15);
+}
+.contacto .contacto-contenido .contacto-wrapper {
+  margin-top: 50px;
+  box-shadow: 0 0 20px 0 rgba(243, 163, 15, 0.3);
+}
+.contacto .contacto-contenido .contacto-wrapper > * {
+  padding: 1em;
+}
+.contacto .contacto-contenido .formulario-contacto {
+  background: #222;
+}
+.contacto .contacto-contenido .formulario-contacto form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.contacto .contacto-contenido .formulario-contacto form .block {
+  grid-column: 1/3;
+}
+.contacto .contacto-contenido .formulario-contacto form label {
+  margin: 0;
+  padding: 1em;
+}
+.contacto .contacto-contenido .formulario-contacto form button,
+.contacto .contacto-contenido .formulario-contacto form input,
+.contacto .contacto-contenido .formulario-contacto form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  border-bottom: 1px solid rgb(243, 163, 15);
+  outline: none;
+  color: white;
+}
+.contacto .contacto-contenido .formulario-contacto form button {
+  background: rgb(243, 163, 15);
+  color: #0f0f0f;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.contacto .contacto-contenido .formulario-contacto form button:hover, .contacto .contacto-contenido .formulario-contacto form button:focus {
+  background: #222222;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+.contacto .contacto-contenido .formulario-contacto .contacto-info {
+  background: rgb(243, 163, 15);
+  color: #0f0f0f;
+}
+.contacto .contacto-contenido .formulario-contacto .contacto-info h4,
+.contacto .contacto-contenido .formulario-contacto .contacto-info ul,
+.contacto .contacto-contenido .formulario-contacto .contacto-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+.contacto .contacto-contenido .formulario-contacto .contacto-info ul {
+  list-style: none;
+  padding: 0;
+}
+.contacto .contacto-contenido .formulario-contacto .contacto-info ul li {
+  pad: 0.3rem;
+}
 
+.hero {
+  height: 100vh;
+  background-image: url(../img/ryskcombat-imagen-inicio.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-self: center;
 }
-/* ESTILOS DE FORMULARIO */
-.formulario-contacto form {
+.hero .hero-text {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 30px 0;
+}
+.hero .hero-text p {
+  margin: 15px 10px;
+}
+.hero .hero-text button {
+  background: rgb(243, 163, 15);
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  width: 90%;
+  margin: 5px;
+}
+.hero .hero-text button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0f0f0f;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+.hero .hero-text button:hover::after {
+  top: 0;
+}
+.hero .hero-text button span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+
+.barra-busqueda {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  top: 4.5rem;
+  padding: 10px;
+  width: 100%;
+}
+.barra-busqueda .lista-pesos {
+  position: relative;
+  display: inline-block;
+}
+.barra-busqueda .lista-pesos .dropbtn {
+  background: rgb(243, 163, 15);
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 23px;
+  font-size: 16px;
+  margin-right: 25px;
+}
+.barra-busqueda .lista-pesos .contenido-lista-pesos {
+  position: absolute;
+  background: #9e2e2e;
+  right: 25px;
+  display: none;
+}
+.barra-busqueda .lista-pesos .contenido-lista-pesos a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  z-index: 1;
+}
+.barra-busqueda .lista-pesos .ver {
+  display: block;
+}
+
+.container {
+  margin-top: 5rem;
+}
+.container .tarjeta {
+  margin: 10px 0;
+  background: white;
+  width: 100%;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container .tarjeta .tarjeta-top {
+  display: flex;
+  align-items: center;
+}
+.container .tarjeta .tarjeta-top .tarjeta-contenido {
+  flex-grow: 1;
+  text-align: start;
+  margin: 10px;
+  padding: 15px;
+}
+.container .tarjeta .tarjeta-redes-sociales {
+  display: flex;
+  justify-content: space-around;
+}
+
+.titulo {
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.ranking-section {
+  background: rgba(243, 163, 15, 0.733);
+}
+
+footer {
+  min-height: 100px;
+  background: #0f0f0f;
+}
+footer .footer-logo {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+}
+footer .footer-texto {
+  font-size: 1.5rem;
+  padding: 20px;
+  margin-bottom: 30px;
+  color: white;
+}
+footer .redes-sociales a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+}
+footer .redes-sociales a:hover {
+  background-color: rgb(243, 163, 15);
+  border: 1px solid #e6e6e6;
+}
+footer .redes-sociales i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+footer .redes-sociales i:hover {
+  color: #0f0f0f;
+}
+
+@media screen and (min-width: 700px) {
+  .navbar-brand {
+    display: block !important;
+  }
+  .hero-text button {
+    width: 30% !important;
+  }
+  .card {
+    max-width: 100% !important;
+  }
+  .contacto-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-.formulario-contacto form .block{
-    grid-column: 1 / 3;
-}
-.formulario-contacto form div label {
-    margin: 0;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contacto-wrapper > * {
+    padding: 2em;
+  }
+  .contacto-wrapper .contacto-info h4,
+  .contacto-wrapper .contacto-info ul,
+  .contacto-wrapper .contacto-info p {
     padding: 1em;
-}
-.formulario-contacto form button,
-.formulario-contacto form input,
-.formulario-contacto form textarea{
-    width: 100%;
-    padding: .7em;
-    border: none;
-    background: none;
-    border-bottom: 1px solid rgb(243, 163, 15);
-    outline: none;
-    color: white;
-}
-/* ESTILOS BOTON */
-.formulario-contacto form button{
-    background: rgb(243, 163, 15) ;
-    border: 0;
-    text-transform: uppercase;
+    text-align: left;
+  }
+  .barra-busqueda {
     padding: 1em;
-    color: #0f0f0f;
-}
-.formulario-contacto form button:hover,
-.formulario-contacto form button:focus{
-    background: #222222;
-    color: white;
-    transition: background-color .3s ease-in-out;
-}
-/* FORMULARIO INFO */
-.contacto-info{
-    background:rgb(243, 163, 15);
-    color: #0f0f0f;
-}
-.contacto-info h4,
-.contacto-info ul,
-.contacto-info p {
-    text-align: center;
-    margin: 0 0 1rem 0;
+  }
 }
 
-.contacto-info ul{
-    list-style: none;
-    padding: 0;
-}
-
-.contacto-info ul li {
-    padding:.3rem;
-}
-
-/* RESPONSIVE SECCION  CONTACTO*/
-@media (min-width:700px){
-    .contacto-wrapper{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
-    .contacto-wrapper > *{
-        padding: 2em;
-    }
-
-    .contacto-info h4,
-    .contacto-info ul,
-    .contacto-info p{
-        padding: 1em;
-        text-align: left;
-    }
-}
+/*# sourceMappingURL=style.css.map */

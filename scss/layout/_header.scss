@@ -1,0 +1,17 @@
+header{
+    .navbar{
+        background-color:$color-principal;
+        padding: 1rem;
+
+        .navbar-collapse{
+            align-items: center;
+            justify-content: space-between;
+            
+            .navbar-brand{
+                display: none;
+            }
+        }
+
+    }
+
+}
